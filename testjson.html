@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>JSON read test</title>
+    <script>
+        function getJSONFileRequest(file, callback) {
+            var rawFile = new XMLHttpRequest();
+            rawFile.overrideMimeType("application/json");
+            //console.log(rawFile);
+            rawFile.open("GET", file, true);
+            rawFile.onreadystatechange = function () {
+                if (rawFile.readyState === 4 && rawFile.status == "200") {
+                    callback(rawFile.responseText);
+                }
+            }
+            rawFile.send(null);
+        }
+
+        var unhandledData = [];
+
+        function parseJSONObject(JSONFile) {
+            var object = "defined";
+            var isReady = false;
+            var request = getJSONFileRequest(JSONFile, function (text) {
+                //console.log(object + " " + text);
+                object = JSON.parse(text);
+                unhandledData.push(object);
+                console.log(object + " " + unhandledData.length);
+                isReady = true;
+            })
+        }
+
+
+        function handleData() {
+            
+            if (unhandledData.length <= 0) {
+                setTimeout(function () {
+                    handleData();
+                }, 100);
+                console.log("No data to handle");
+                return;
+            }
+
+            for (var i = 0; i < unhandledData.length; i++) {
+                if (unhandledData[i].type == "concerts")
+                    concert = unhandledData[i];
+                    unhandledData.splice(i, 1);
+            }
+            console.log("Data handled");
+            setTimeout(function () {
+                handleData();
+            }, 10);
+        }
+
+        handleData();
+
+
+        var concert;
+        parseJSONObject("testfile.json");
+    </script>
+</head>
+<body>
+
+    <script>
+
+
+        //concert = parseJSONObject("testfile.json");
+        setTimeout(function () {
+            console.log(concert);
+            var temp = document.createElement("p");
+            temp.innerHTML = "Concerts: <br />";
+            var concerts = concert.concerts;
+            console.log(concerts)
+            for (var s in concert.concerts) {
+                var c = concert.concerts[s]
+                console.log(c);
+                temp.innerHTML += c.id + " " + c.band + "<br>";
+            }
+            document.body.appendChild(temp);
+        }, 250)
+        
+        
+    </script>
+</body>
+</html>

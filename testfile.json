@@ -1,0 +1,40 @@
+{
+  "concerts": [
+    {
+      "id": 1,
+      "band": "George and the funkbots",
+      "ticketprice": 340,
+      "ticketssold": 140,
+      "maxattendence": 350
+    },
+    {
+      "id": 2,
+      "band": "Jason and the rockers",
+      "ticketprice": 340,
+      "ticketssold": 140,
+      "maxattendence": 350
+    },
+    {
+      "id": 3,
+      "band": "Jason and the rockers",
+      "ticketprice": 340,
+      "ticketssold": 140,
+      "maxattendence": 350
+    },
+    {
+      "id": 4,
+      "band": "Jason and the rockers",
+      "ticketprice": 340,
+      "ticketssold": 140,
+      "maxattendence": 350
+    },
+    {
+      "id": 5,
+      "band": "Jason and the rockers",
+      "ticketprice": 340,
+      "ticketssold": 140,
+      "maxattendence": 350
+    }
+  ],
+  "type": "concerts"
+}
