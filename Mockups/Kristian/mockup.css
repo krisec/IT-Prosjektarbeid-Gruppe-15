@@ -1,0 +1,61 @@
+﻿body
+{
+    background:#8C001A;
+    padding-top:10px;
+}
+
+#content{
+    background:#f5f5dc;
+    width:50%;
+    float:left;
+    padding:5px;
+    border-radius:5px;
+    margin-bottom:5px;
+}
+
+#sidebar-left{
+    background:#f5f5dc;
+    width:12%;
+    float:left;
+    margin-left:12.5%;
+    margin-right:25px;
+    padding-left:5px;
+    padding-top:15px;
+    padding-bottom:15px;
+
+    border-radius: 5px;
+}
+
+.singleContent{
+    font-size:25px;
+    padding:20px;
+    border:1px #000 solid;
+    margin-bottom:5px;
+    color:#8C001A;
+}
+
+.bandDesc{
+    font-size:15px;
+    color:#000;
+}
+
+#userID{
+    float:right;
+    background:#f5f5dc;
+    padding:5px;
+    border-radius:5px;
+    /*0margin-top:20px;*/
+}
+
+strong{
+    color:#8C001A;
+}
+
+.concertBandOverview{
+    font-size:20px;
+}
+
+.concertInfo{
+    font-size:15px;
+    margin-top:10px;
+}
