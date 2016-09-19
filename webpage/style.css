@@ -16,6 +16,7 @@ header{
 	background: #434041;
 	padding: 10px;
 	padding-bottom: 5px;
+	box-sizing: border-box;
 }
 
 .wrapper{
@@ -31,8 +32,9 @@ header{
 
 .Site {
   display: flex;
-  min-height: 100vh;
+  min-height: 90vh;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .pagecontent{
@@ -45,6 +47,7 @@ header{
 	background: #e9e9e9;
 	min-height: 90vh;
 	padding: 5px;
+	box-sizing: border-box;
 }
 
 
@@ -52,5 +55,20 @@ footer{
 	width:100%;
 	height: 60px;
 	background: #434041;
+	box-sizing: border-box;
 }
+
+#main_table{
+	background: #FFF;
+	border: 1px solid #dcdcdc;
+}
+
+#main_table th{
+	background: #f8f8f8;
+	text-transform: uppercase;
+}
+
+
+}
+
 
