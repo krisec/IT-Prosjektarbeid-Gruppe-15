@@ -61,6 +61,7 @@ footer{
 #main_table{
 	background: #FFF;
 	border: 1px solid #dcdcdc;
+	min-width: 95%;
 }
 
 #main_table th{
@@ -69,6 +70,21 @@ footer{
 }
 
 
+#main_table th, #main_table td{
+	text-align: left;
+	padding: 5px;
+	border-left: 1px solid #dcdcdc;
+	border-top: 0px;
+	border-bottom: 0px;
+	
+}
+
+#main_table tr{
+	border: 0px;
+}
+
+h1{
+	margin-bottom: 10px;
 }
 
 
