@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title>Connection Test PHP</title>
-
     <?php
 	    $servername = "mysql.stud.ntnu.no";
 	    $username = "krsta";
@@ -18,7 +11,7 @@
 	    }
         $sql = "SELECT * FROM bands";
         $result = $conn->query($sql);
-
+		echo "<p>";
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
@@ -27,9 +20,6 @@
         } else {
             echo "0 results";
         }
+		echo "</p>";
         $conn->close();
     ?>
-</head>
-<body>
-</body>
-</html>
