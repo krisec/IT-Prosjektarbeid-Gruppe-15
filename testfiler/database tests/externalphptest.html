@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.1.0.min.js"></script>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        $.get("getbandsquery.php", function (data, status) {
+            console.log(data + " " + status);
+            $("#output").html(data);
+        });
+    </script>
+</body>
+</html>
